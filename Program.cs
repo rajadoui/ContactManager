@@ -13,26 +13,34 @@ class Program
             Console.WriteLine("1. Add Contact");
             Console.WriteLine("2. List Contacts");
             Console.WriteLine("3. Search Contact");
-            Console.WriteLine("4. Exit");
+            Console.WriteLine("4. Search Contact by Phone");
+            Console.WriteLine("5. Exit");
             Console.Write("Choose an option: ");
             var choice = Console.ReadLine();
 
             switch (choice)
             {
-                case "1":
-                    AddContact();
-                    break;
-                case "2":
-                    ListContacts();
-                    break;
-                case "3":
-                    SearchContact();
-                    break;
-                case "4":
-                    return;
-                default:
-                    Console.WriteLine("Invalid choice. Please try again.");
-                    break;
+switch (choice)
+{
+            case "1":
+                AddContact();
+                break;
+            case "2":
+                ListContacts();
+                break;
+            case "3":
+                SearchContact();
+                break;
+            case "4":
+                SearchContactByPhone();
+                break;
+            case "5":
+                return;
+            default:
+                Console.WriteLine("Invalid choice. Please try again.");
+                break;
+}
+
             }
         }
     }
@@ -80,5 +88,26 @@ class Program
             Console.WriteLine("No contacts found.");
         }
     }
+
+    static void SearchContactByPhone()
+{
+    Console.Write("Enter Phone to Search: ");
+    var phone = Console.ReadLine();
+
+    var foundContacts = contacts.FindAll(c => c.Phone.Contains(phone));
+    if (foundContacts.Count > 0)
+    {
+        Console.WriteLine("\n=== Search Results ===");
+        foreach (var contact in foundContacts)
+        {
+            Console.WriteLine(contact);
+        }
+    }
+    else
+    {
+        Console.WriteLine("No contacts found.");
+    }
+}
+
 }
 
