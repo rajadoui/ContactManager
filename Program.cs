@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-
+/*
+    * A simple contact manager program that allows users to add, list, and search contacts.
+*/
 class Program
 {
     static List<Contact> contacts = new List<Contact>();
