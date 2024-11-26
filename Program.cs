@@ -11,7 +11,7 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("\n=== Contact Manager ===");
+            Console.WriteLine("\n=== Contact Manager for master branch===");
             Console.WriteLine("1. Add Contact");
             Console.WriteLine("2. List Contacts");
             Console.WriteLine("3. Search Contact");
