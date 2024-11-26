@@ -44,7 +44,7 @@ switch (choice)
             }
         }
     }
-
+    // Add a new contact to the list
     static void AddContact()
     {
         Console.Write("Enter Name: ");
@@ -59,7 +59,7 @@ switch (choice)
         contacts.Add(new Contact { Name = name, Email = email, Phone = phone });
         Console.WriteLine("Contact added successfully!");
     }
-
+    // List all contacts in the list
     static void ListContacts()
     {
         Console.WriteLine("\n=== Contact List ===");
@@ -68,7 +68,7 @@ switch (choice)
             Console.WriteLine(contact);
         }
     }
-
+    // Search for a contact by name
     static void SearchContact()
     {
         Console.Write("Enter Name to Search: ");
@@ -88,7 +88,7 @@ switch (choice)
             Console.WriteLine("No contacts found.");
         }
     }
-
+    // Search for a contact by phone
     static void SearchContactByPhone()
 {
     Console.Write("Enter Phone to Search: ");
