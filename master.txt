@@ -2,3 +2,5 @@ Master Branch
 FirstBranch
 
 Let's see the git diff command how it does works.
+
+This line is to play with the "git revert command".
